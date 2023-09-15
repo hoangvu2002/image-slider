@@ -10,6 +10,8 @@ function showImageById(imageId) {
 }
 
 showImageById('slide1');
+const firstCircle = document.querySelector('.circle');
+firstCircle.classList.add('on');
 
 const circles = document.querySelectorAll('.circle');
 circles.forEach((circle) => {
@@ -23,3 +25,40 @@ circles.forEach((circle) => {
   });
 });
 
+const leftArrow = document.getElementById('left');
+leftArrow.addEventListener('click', () => {
+    const currentSlide = document.querySelector('.on');
+    const slideId = String(currentSlide.getAttribute('data-id'));
+    if ( slideId === "slide1") {
+        return;
+    };
+
+    nextSlide = `${slideId.slice(0,-1)}${Number(slideId.slice(-1))-1}`;
+    showImageById(nextSlide);
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach((circle) => {
+        circle.classList.remove('on');
+        if (circle.getAttribute('data-id') === nextSlide) {
+            circle.classList.add('on');
+        };
+    })
+});
+
+const rightArrow = document.getElementById('right');
+rightArrow.addEventListener('click', () => {
+    const currentSlide = document.querySelector('.on');
+    const slideId = String(currentSlide.getAttribute('data-id'));
+    if ( slideId === "slide4") {
+        return;
+    };
+
+    nextSlide = `${slideId.slice(0,-1)}${Number(slideId.slice(-1))+1}`;
+    showImageById(nextSlide);
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach((circle) => {
+        circle.classList.remove('on');
+        if (circle.getAttribute('data-id') === nextSlide) {
+            circle.classList.add('on');
+        };
+    })
+});
