@@ -22,3 +22,4 @@ circles.forEach((circle) => {
     circle.classList.add('on');
   });
 });
+
