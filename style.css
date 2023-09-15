@@ -24,4 +24,9 @@
     margin: 10px; /* Add margin for spacing between circles */
     display: inline-block; /* Display circles in a row */
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.on {
+    background-color: aqua;
 }
