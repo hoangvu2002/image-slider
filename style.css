@@ -7,11 +7,13 @@
     border: 10px solid black;
     position: relative;
     margin: auto;
+    transition: transform 0.5s ease;
 }
 
 .container img {
     display: none;
     height: 500px;
+    object-fit: cover; 
 }
 
 .circle-nav {
@@ -37,6 +39,11 @@
     font-size: 100px;
     cursor: pointer;
     position: absolute;
+    transition: 0.3s;
+}
+
+.arrow:hover {
+    scale: 1.2;
 }
 
 #left {
