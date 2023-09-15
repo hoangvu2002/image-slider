@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border: 10px solid black;
+}
+
+.container img {
+    display: none;
+    height: 500px;
+}
+
+.circle-nav {
+    text-align: center;
+}
+
+.circle {
+    width: 20px; /* Adjust the width and height to control the circle's size */
+    height: 20px;
+    background-color: black; /* Change the background color */
+    border-radius: 50%; /* Use border-radius to create a circle */
+    margin: 10px; /* Add margin for spacing between circles */
+    display: inline-block; /* Display circles in a row */
+    cursor: pointer;
+}

@@ -8,3 +8,13 @@ function showImageById(imageId) {
         }
     });
 }
+
+showImageById('slide1');
+
+const circles = document.querySelectorAll('.circle');
+circles.forEach((circle) => {
+    circle.addEventListener('click', () => {
+        showImageById(circle.getAttribute('data-id'));
+        
+    })
+})
